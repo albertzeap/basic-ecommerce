@@ -21,7 +21,7 @@ const ProductItem = props => {
                         </b>
                         <div>{product.shortDesc}</div>
                         {product.stock > 0 ? (
-                            <small>{product.stock + "Available"}</small>
+                            <small>{product.stock + " Available"}</small>
                         ) : (
                             <small className="has-text-danger">Out of Stock</small>
                         )}

@@ -31,13 +31,13 @@ const Cart = props => {
                   <div className="is-pulled-right">
 
                     <div>
-                     {cartKeys.map(key => {
+                     {cartKeys.forEach(key => {
                        total = total + (parseFloat(cart[key].product.price) * cart[key].amount);
 
                        // Look into how to refactor this code without having to return empty tags
-                       return <></>;
+                      //  return <></>;
                      })}
-                     <h4 className="title is-4">Total: ${total}</h4>
+                     <h4 className="title is-4 pb-2">Total: ${total}</h4>
                     </div>
 
                     <button

@@ -5,6 +5,8 @@ import CartItem from "./CartItem";
 const Cart = props => {
     const { cart } = props.context;
     const cartKeys = Object.keys(cart || {});
+    let total = 0;
+
     return (
         <>
           <div className="hero is-primary">
@@ -27,6 +29,17 @@ const Cart = props => {
                 <div className="column is-12 is-clearfix">
                   <br />
                   <div className="is-pulled-right">
+
+                    <div>
+                     {cartKeys.map(key => {
+                       total = total + (parseFloat(cart[key].product.price) * cart[key].amount);
+
+                       // Look into how to refactor this code without having to return empty tags
+                       return <></>;
+                     })}
+                     <h4 className="title is-4">Total: ${total}</h4>
+                    </div>
+
                     <button
                       onClick={props.context.clearCart}
                       className="button is-warning "
@@ -39,6 +52,7 @@ const Cart = props => {
                     >
                       Checkout
                     </button>
+
                   </div>
                 </div>
               </div>

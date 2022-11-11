@@ -74,7 +74,7 @@ class Login extends Component {
         </form>
       </>
     ) : (
-      <Navigate element="/products" />
+      <Navigate to="/products" />
     );
   }
 }

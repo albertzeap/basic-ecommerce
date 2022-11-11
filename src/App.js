@@ -28,7 +28,7 @@ export default class App extends Component {
     const products = await axios.get('http://localhost:3001/products');
     user = user ? JSON.parse(user) : null;
     cart = cart ? JSON.parse(cart) : {};
-    this.setState({ user, products: products.data });
+    this.setState({ user, products: products.data, cart });
   }
   
   login = async (email, password) => {

@@ -9,9 +9,9 @@ const CartItem = props => {
             <div className="box">
                 <div className="media">
                     <div className="media-left">
-                        <figure className="image is-64x64">
+                        <figure className="image is-128x128">
                             <img
-                                src="https://bulma.io/images/placeholders/128x128.png"
+                                src={`${product.image}`}
                                 alt={product.shortDesc} 
                             />
                         </figure>

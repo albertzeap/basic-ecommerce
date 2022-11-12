@@ -2,9 +2,6 @@ import React from "react";
 
 const ProductItem = props => {
     const { product } = props;
-    // const image = "https://bulma.io/images/placeholders/128x128.png"
-    // console.log(product.image);
-    // console.log(product.name);
 
     return (
         <div className="column is-half">
@@ -32,12 +29,12 @@ const ProductItem = props => {
                         <div className="is-clearfix">
                             <button
                                 className="button is-small is-outlined is-primary is-pulled-right"
-                                onClick={() =>
-                                    props.addToCart({
-                                        id: product.name,
-                                        product,
-                                        amount : 1
-                                    })
+                                onClick={() => 
+                                        props.addToCart({
+                                            id: product.name,
+                                            product,
+                                            amount : 1
+                                        })   
                                 }
                             >
                                 Add to Cart

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import withContext from "../withContext";
 
 class Login extends Component {
@@ -66,8 +66,11 @@ class Login extends Component {
                 <button
                   className="button is-primary is-outlined is-pulled-right"
                 >
-                  Submit
+                  Login
                 </button>
+                {/* <Link to="/signup" className="button" >
+                    Sign Up
+                </Link> */}
               </div>
             </div>
           </div>

@@ -9,6 +9,7 @@ import ProductList from './components/ProductList';
 import Context from "./Context";
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
+import Signup from "./components/Signup";
 
 export default class App extends Component {
   constructor(props) {
@@ -65,6 +66,12 @@ export default class App extends Component {
     let products = this.state.products.slice();
     products.push(product);
     this.setState({ products }, () => callback && callback());
+  };
+
+  addUser = (account, callback) =>{
+    let user = this.state.user.slice();
+    user.push(account);
+    this.setState({ account }, () => callback && callback());
   };
 
   addToCart = cartItem =>{
@@ -191,6 +198,7 @@ export default class App extends Component {
               <Route exact path="/cart" element={<Cart/>} />
               <Route exact path="/add-product" element={<AddProduct/>} />
               <Route exact path="/products" element={<ProductList/>} />
+              <Route exact path="/signup" element={<Signup/>}/>
             </Routes>
           </div>
         </Router>

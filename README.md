@@ -10,7 +10,8 @@ The code to accompany [this SitePoint tutorial](https://www.sitepoint.com/how-to
 1. Personalize site aesthetic
 2. Allow user to subtract one product amount from cart on top of deleting the whole product
 3. Confirmation messages upon adding to cart, clearing cart, and checking out
-4. Potentially move local database to Firebase
+4. Account creation feature
+5. Potentially move local database to Firebase
 
 ## Requirements
 
